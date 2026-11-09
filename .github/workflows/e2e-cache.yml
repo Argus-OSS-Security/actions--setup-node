@@ -1,16 +1,17 @@
 name: e2e-cache
 
-on:
-  pull_request:
-    paths-ignore:
-      - '**.md'
-  push:
-    branches:
-      - main
-      - releases/*
-    paths-ignore:
-      - '**.md'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#     paths-ignore:
+#       - '**.md'
+#   push:
+#     branches:
+#       - main
+#       - releases/*
+#     paths-ignore:
+#       - '**.md'
+# 
 jobs:
   node-npm-depencies-caching:
     name: Test npm (Node ${{ matrix.node-version}}, ${{ matrix.os }})
